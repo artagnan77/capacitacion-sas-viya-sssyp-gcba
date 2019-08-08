@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 2 Subir nuetros propios datos a SAS Viya | Capacitacion SAS Viya para GCBA</title>
+  <meta name="description" content="Inicializado gracias a ‘seankross/bookdown-start’ Everything you need (and nothing more) to start a bookdown book." />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 2 Subir nuetros propios datos a SAS Viya | Capacitacion SAS Viya para GCBA" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Inicializado gracias a ‘seankross/bookdown-start’ Everything you need (and nothing more) to start a bookdown book." />
+  <meta name="github-repo" content="artagnan77/capacitacion-sas-viya-gcba.git" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 2 Subir nuetros propios datos a SAS Viya | Capacitacion SAS Viya para GCBA" />
+  
+  <meta name="twitter:description" content="Inicializado gracias a ‘seankross/bookdown-start’ Everything you need (and nothing more) to start a bookdown book." />
+  
+
+<meta name="author" content="Sergio Lemme" />
+
+
+<meta name="date" content="2019-08-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction.html">
+<link rel="next" href="technical-details.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Capacitacion SAS Viya para GCBA</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="subir-nuetros-propios-datos-a-sas-viya.html"><a href="subir-nuetros-propios-datos-a-sas-viya.html"><i class="fa fa-check"></i><b>2</b> Subir nuetros propios datos a SAS Viya</a><ul>
+<li class="chapter" data-level="2.1" data-path="subir-nuetros-propios-datos-a-sas-viya.html"><a href="subir-nuetros-propios-datos-a-sas-viya.html#subir-nuestro-archivo-excel"><i class="fa fa-check"></i><b>2.1</b> Subir nuestro archivo excel</a></li>
+<li class="chapter" data-level="2.2" data-path="subir-nuetros-propios-datos-a-sas-viya.html"><a href="subir-nuetros-propios-datos-a-sas-viya.html#los-pasos-a-seguir-para-construir-nuestra-propia-tabla-cas-a-partir-del-archivo-serian-los-siguientes"><i class="fa fa-check"></i><b>2.2</b> Los pasos a seguir para construir nuestra propia tabla CAS a partir del archivo serían los siguientes:</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="subir-nuetros-propios-datos-a-sas-viya.html"><a href="subir-nuetros-propios-datos-a-sas-viya.html#vamos-a-la-seccion-gestionar-datos"><i class="fa fa-check"></i><b>2.2.1</b> Vamos a la sección “Gestionar Datos”</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="technical-details.html"><a href="technical-details.html"><i class="fa fa-check"></i><b>3</b> Technical Details</a></li>
+<li class="chapter" data-level="4" data-path="este-es-el-capitulo-4.html"><a href="este-es-el-capitulo-4.html"><i class="fa fa-check"></i><b>4</b> Este es el capitulo 4</a><ul>
+<li class="chapter" data-level="4.1" data-path="este-es-el-capitulo-4.html"><a href="este-es-el-capitulo-4.html#r-markdown"><i class="fa fa-check"></i><b>4.1</b> R Markdown</a></li>
+<li class="chapter" data-level="4.2" data-path="este-es-el-capitulo-4.html"><a href="este-es-el-capitulo-4.html#including-plots"><i class="fa fa-check"></i><b>4.2</b> Including Plots</a></li>
+<li class="chapter" data-level="4.3" data-path="este-es-el-capitulo-4.html"><a href="este-es-el-capitulo-4.html#tambien-permite-bulletaer"><i class="fa fa-check"></i><b>4.3</b> Tambien permite bulletaer</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Capacitacion SAS Viya para GCBA</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="subir-nuetros-propios-datos-a-sas-viya" class="section level1">
+<h1><span class="header-section-number">Capítulo 2</span> Subir nuetros propios datos a SAS Viya</h1>
+<p>Como vimos anteriormente, la plataforma de BI nos permite acceder a una base de datos integrada de muchas y variadas fuentes de datos. Los datos de las diferentes fuentes se encuentran integrados en un solo modelo de datos, lo que permite la explotación integral de la información.</p>
+<p>Una de las fuentes principales del Datawarehouse que mantenemos en la Subsecretaria es la base de datos del ecosistema SADE.</p>
+<p>Un usuario de self-service podrá acceder a las tablas que este autorizado en función de su sector/rol dentro de la organización.</p>
+<p>Pero a veces el usuario necesita trabajar con otro set de datos, proveniente otro sector o bajado desde otra fuenta de datos. En estos casos puede subir su propio set de datos, dede un archivo CSV o una planilla excel y luego no sólo trabajar con estos datos sino también en caso de aplicar, combinarlos con tablas ya disponibles en la plataforma.</p>
+<div id="subir-nuestro-archivo-excel" class="section level2">
+<h2><span class="header-section-number">2.1</span> Subir nuestro archivo excel</h2>
+<p>En esta práctica vamos a subir una planilla excel, pero también podríamos subir un archivo CSV, lo cual incluso es mejor ya que es un formato estándar, de texto simple y no propietario. Además podemos esperar menos errores al trabajar con archivos de este tipo.</p>
+<p>Si se trata de un archivo excel como el que vamos a subir ahora, tenemos que verificar que sea lo más limpio posble, la planilla debe contener los datos en forma de tabla, con sus columnas y registros. Sin filas en blanco o con información formateada con otros objetivos de visualización. Miestras más limpia sea la planilla menos problemas vamos a tener.</p>
+<p>El archivo elegido en nuestro caso contiene una tabla con 3 columnas:</p>
+<ul>
+<li>EXPEDIENTE_CALC</li>
+<li>CODIGO_EXTRACTO</li>
+<li>ESTADO_EXP</li>
+</ul>
+<div class="figure"><span id="fig:unnamed-chunk-1"></span>
+<img src="../imagenes/cap_subir_excel_img_0.1.png" alt="Archivo excel a subir"  />
+<p class="caption">
+Figure 2.1: Archivo excel a subir
+</p>
+</div>
+<p>Podría tratarse de un archivo provisto por otro sector requiriendo cierta información para los expedientes incluídos en el mismo. O bien una lista de expedientes que necesitamos cotejar versus los datos de la base de Expediente Electrónico de SADE.</p>
+</div>
+<div id="los-pasos-a-seguir-para-construir-nuestra-propia-tabla-cas-a-partir-del-archivo-serian-los-siguientes" class="section level2">
+<h2><span class="header-section-number">2.2</span> Los pasos a seguir para construir nuestra propia tabla CAS a partir del archivo serían los siguientes:</h2>
+<div id="vamos-a-la-seccion-gestionar-datos" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Vamos a la sección “Gestionar Datos”</h3>
+Hacemos click en el “Menú de Aplicaciones”:
+<div class="figure"><span id="fig:unnamed-chunk-2"></span>
+<img src="../imagenes/cap_subir_excel_img_1.3.png" alt="Menu de aplicaciones"  />
+<p class="caption">
+Figure 2.2: Menu de aplicaciones
+</p>
+</div>
+Elegimos la opción “Gestionar Datos”:
+<div class="figure"><span id="fig:unnamed-chunk-3"></span>
+<img src="../imagenes/cap_subir_excel_img_2.2.png" alt="Opción del menú Gestionar Datos"  />
+<p class="caption">
+Figure 2.3: Opción del menú Gestionar Datos
+</p>
+</div>
+En esta sección podemos ver todas las tablas CAS disponibles que tenemos.
+Para subir nuesro archivo y construir nuestra propia tabla CAS debemos hacer click en Importar:
+<div class="figure"><span id="fig:unnamed-chunk-4"></span>
+<img src="../imagenes/cap_subir_excel_img_3.png" alt="Importar"  />
+<p class="caption">
+Figure 2.4: Importar
+</p>
+</div>
+Seleccionamos “Archivo local”:
+<div class="figure"><span id="fig:unnamed-chunk-5"></span>
+<img src="../imagenes/cap_subir_excel_img_4.2.png" alt="Subir archivo local"  />
+<p class="caption">
+Figure 2.5: Subir archivo local
+</p>
+</div>
+Ahora se nos abrirá el “wizard” de windows para que naveguemos por nuestras carpetas y seleccionemos el archivo.
+Una vez seleccionado, le damos al botón de “Abrir” y se abrirá la siguiente pantalla para ultimar los detalles de nuestra importación:
+<div class="figure"><span id="fig:unnamed-chunk-6"></span>
+<img src="../imagenes/cap_subir_excel_img_5.png" alt="Subir archivo local"  />
+<p class="caption">
+Figure 2.6: Subir archivo local
+</p>
+</div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="technical-details.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

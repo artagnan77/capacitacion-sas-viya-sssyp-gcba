@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 2 Subir nuestros datos a SAS Viya | Capacitacion SAS Viya para GCBA</title>
+  <meta name="description" content="Inicializado gracias a ‘seankross/bookdown-start’ Everything you need (and nothing more) to start a bookdown book." />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 2 Subir nuestros datos a SAS Viya | Capacitacion SAS Viya para GCBA" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Inicializado gracias a ‘seankross/bookdown-start’ Everything you need (and nothing more) to start a bookdown book." />
+  <meta name="github-repo" content="artagnan77/capacitacion-sas-viya-gcba.git" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 2 Subir nuestros datos a SAS Viya | Capacitacion SAS Viya para GCBA" />
+  
+  <meta name="twitter:description" content="Inicializado gracias a ‘seankross/bookdown-start’ Everything you need (and nothing more) to start a bookdown book." />
+  
+
+<meta name="author" content="Sergio Lemme" />
+
+
+<meta name="date" content="2019-08-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction.html">
+<link rel="next" href="union-de-fuentes-de-datos.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Capacitacion SAS Viya para GCBA</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="subir-nuestros-datos-a-sas-viya.html"><a href="subir-nuestros-datos-a-sas-viya.html"><i class="fa fa-check"></i><b>2</b> Subir nuestros datos a SAS Viya</a><ul>
+<li class="chapter" data-level="2.1" data-path="subir-nuestros-datos-a-sas-viya.html"><a href="subir-nuestros-datos-a-sas-viya.html#subir-un-archivo-excel"><i class="fa fa-check"></i><b>2.1</b> Subir un archivo excel</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="subir-nuestros-datos-a-sas-viya.html"><a href="subir-nuestros-datos-a-sas-viya.html#nuestra-propia-tabla-cas"><i class="fa fa-check"></i><b>2.1.1</b> Nuestra propia tabla CAS</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="subir-nuestros-datos-a-sas-viya.html"><a href="subir-nuestros-datos-a-sas-viya.html#subir-un-archivo-csv"><i class="fa fa-check"></i><b>2.2</b> Subir un archivo csv</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="subir-nuestros-datos-a-sas-viya.html"><a href="subir-nuestros-datos-a-sas-viya.html#pasos-para-subir-un-archivo-csv"><i class="fa fa-check"></i><b>2.2.1</b> Pasos para subir un archivo CSV</a></li>
+<li class="chapter" data-level="2.2.2" data-path="subir-nuestros-datos-a-sas-viya.html"><a href="subir-nuestros-datos-a-sas-viya.html#posibles-errores"><i class="fa fa-check"></i><b>2.2.2</b> Posibles errores</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="union-de-fuentes-de-datos.html"><a href="union-de-fuentes-de-datos.html"><i class="fa fa-check"></i><b>3</b> Union de fuentes de datos</a><ul>
+<li class="chapter" data-level="3.1" data-path="union-de-fuentes-de-datos.html"><a href="union-de-fuentes-de-datos.html#como-hacer-una-union-de-tablas"><i class="fa fa-check"></i><b>3.1</b> Cómo hacer una union de tablas</a></li>
+<li class="chapter" data-level="3.2" data-path="union-de-fuentes-de-datos.html"><a href="union-de-fuentes-de-datos.html#guardar-reporte"><i class="fa fa-check"></i><b>3.2</b> Guardar reporte</a></li>
+<li class="chapter" data-level="3.3" data-path="union-de-fuentes-de-datos.html"><a href="union-de-fuentes-de-datos.html#nueva-union-de-datos"><i class="fa fa-check"></i><b>3.3</b> Nueva union de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="nuestro-primer-reporte.html"><a href="nuestro-primer-reporte.html"><i class="fa fa-check"></i><b>4</b> Nuestro primer reporte</a><ul>
+<li class="chapter" data-level="4.1" data-path="nuestro-primer-reporte.html"><a href="nuestro-primer-reporte.html#objeto-tabla-de-lista"><i class="fa fa-check"></i><b>4.1</b> Objeto “Tabla de lista”</a></li>
+<li class="chapter" data-level="4.2" data-path="nuestro-primer-reporte.html"><a href="nuestro-primer-reporte.html#filtros-fijos-sobre-el-objeto"><i class="fa fa-check"></i><b>4.2</b> Filtros fijos sobre el objeto</a></li>
+<li class="chapter" data-level="4.3" data-path="nuestro-primer-reporte.html"><a href="nuestro-primer-reporte.html#filtros-sobre-la-fuente-de-datos"><i class="fa fa-check"></i><b>4.3</b> Filtros sobre la fuente de datos</a></li>
+<li class="chapter" data-level="4.4" data-path="nuestro-primer-reporte.html"><a href="nuestro-primer-reporte.html#filtros-dinamicos"><i class="fa fa-check"></i><b>4.4</b> Filtros dinámicos</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="nuestro-primer-reporte.html"><a href="nuestro-primer-reporte.html#barra-deslizante-o-slider"><i class="fa fa-check"></i><b>4.4.1</b> Barra deslizante o slider</a></li>
+<li class="chapter" data-level="4.4.2" data-path="nuestro-primer-reporte.html"><a href="nuestro-primer-reporte.html#lista-o-lista-desplegale"><i class="fa fa-check"></i><b>4.4.2</b> Lista o lista desplegale</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="nuestro-primer-reporte.html"><a href="nuestro-primer-reporte.html#ejercicio-de-ejemplo-con-comparacion-de-datos"><i class="fa fa-check"></i><b>4.5</b> Ejercicio de ejemplo con comparación de datos</a></li>
+<li class="chapter" data-level="4.6" data-path="nuestro-primer-reporte.html"><a href="nuestro-primer-reporte.html#acciones-automaticas-en-todos-los-objetos"><i class="fa fa-check"></i><b>4.6</b> Acciones automáticas en todos los objetos</a></li>
+<li class="chapter" data-level="4.7" data-path="nuestro-primer-reporte.html"><a href="nuestro-primer-reporte.html#contenedores"><i class="fa fa-check"></i><b>4.7</b> Contenedores</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="nuestro-segundo-reporte.html"><a href="nuestro-segundo-reporte.html"><i class="fa fa-check"></i><b>5</b> Nuestro segundo reporte</a><ul>
+<li class="chapter" data-level="5.1" data-path="nuestro-segundo-reporte.html"><a href="nuestro-segundo-reporte.html#categorias-vs.-medidas"><i class="fa fa-check"></i><b>5.1</b> Categorías vs. Medidas</a></li>
+<li class="chapter" data-level="5.2" data-path="nuestro-segundo-reporte.html"><a href="nuestro-segundo-reporte.html#configuracion-inicial-de-los-elementos-de-datos"><i class="fa fa-check"></i><b>5.2</b> Configuración inicial de los elementos de datos</a></li>
+<li class="chapter" data-level="5.3" data-path="nuestro-segundo-reporte.html"><a href="nuestro-segundo-reporte.html#elementos-calculados"><i class="fa fa-check"></i><b>5.3</b> Elementos calculados</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="nuestro-segundo-reporte.html"><a href="nuestro-segundo-reporte.html#uso-de-distinct"><i class="fa fa-check"></i><b>5.3.1</b> Uso de DISTINCT</a></li>
+<li class="chapter" data-level="5.3.2" data-path="nuestro-segundo-reporte.html"><a href="nuestro-segundo-reporte.html#concatenar-cadenas-de-caracteres"><i class="fa fa-check"></i><b>5.3.2</b> Concatenar cadenas de caracteres</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="nuestro-segundo-reporte.html"><a href="nuestro-segundo-reporte.html#grafico-de-barras"><i class="fa fa-check"></i><b>5.4</b> Gráfico de barras</a></li>
+<li class="chapter" data-level="5.5" data-path="nuestro-segundo-reporte.html"><a href="nuestro-segundo-reporte.html#controles-de-filtros"><i class="fa fa-check"></i><b>5.5</b> Controles de filtros</a></li>
+<li class="chapter" data-level="5.6" data-path="nuestro-segundo-reporte.html"><a href="nuestro-segundo-reporte.html#acciones-hacer-interactuar-graficos-y-filtros-entre-si"><i class="fa fa-check"></i><b>5.6</b> Acciones, hacer interactuar gráficos y filtros entre sí</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="mapas.html"><a href="mapas.html"><i class="fa fa-check"></i><b>6</b> Mapas</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Capacitacion SAS Viya para GCBA</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="subir-nuestros-datos-a-sas-viya" class="section level1">
+<h1><span class="header-section-number">Capítulo 2</span> Subir nuestros datos a SAS Viya</h1>
+<p>Como vimos anteriormente, la plataforma de BI nos permite acceder a una base de datos integrada de muchas y variadas fuentes de datos. Los datos de las diferentes fuentes se encuentran integrados en un solo modelo de datos, lo que permite la explotación integral de la información.</p>
+<p>Una de las fuentes principales del Datawarehouse que mantenemos en la Subsecretaria es la base de datos del ecosistema SADE.</p>
+<p>Un usuario de self-service podrá acceder a las tablas que este autorizado en función de su sector/rol dentro de la organización.</p>
+<p>Pero a veces el usuario necesita trabajar con otro set de datos, proveniente otro sector o bajado desde otra fuenta de datos. En estos casos puede subir su propio set de datos, dede un archivo CSV o una planilla excel y luego no sólo trabajar con estos datos sino también en caso de aplicar, combinarlos con tablas ya disponibles en la plataforma.</p>
+<div id="subir-un-archivo-excel" class="section level2">
+<h2><span class="header-section-number">2.1</span> Subir un archivo excel</h2>
+<p>Lo primero que debemos hacer antes de subir una planilla excel es verificar que sea lo más limpia posible para evitar errores, la planilla debe contener los datos en forma de tabla, con sus columnas y registros, sin filas vacías y con el menor formato posible.</p>
+<p>El archivo elegido en nuestro caso contiene una tabla con 3 columnas:</p>
+<ul>
+<li>EXPEDIENTE_CALC</li>
+<li>CODIGO_EXTRACTO</li>
+<li>ESTADO_EXP</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="../imagenes/cap1_subir_excel_img_0.1.png" alt="Archivo excel a subir"  />
+<p class="caption">
+Figure 2.1: Archivo excel a subir
+</p>
+</div>
+<p>Podría tratarse de un archivo provisto por otro sector requiriendo cierta información para los expedientes incluídos en el mismo. O bien una lista de expedientes que necesitamos cotejar versus los datos de la base de Expediente Electrónico de SADE.</p>
+<div id="nuestra-propia-tabla-cas" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Nuestra propia tabla CAS</h3>
+<p>Los pasos a seguir para construir nuestra propia tabla CAS a partir del archivo serían los siguientes:</p>
+<ol style="list-style-type: decimal">
+<li><p>Vamos a la sección “Gestionar Datos”</p></li>
+<li>Hacemos click en el “Menú de Aplicaciones”:
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="../imagenes/cap1_subir_excel_img_1.3.png" alt="Menu de aplicaciones"  />
+<p class="caption">
+Figure 2.2: Menu de aplicaciones
+</p>
+</div></li>
+<li>Elegimos la opción “Gestionar Datos”:
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="../imagenes/cap1_subir_excel_img_2.2.png" alt="Opción del menú Gestionar Datos"  />
+<p class="caption">
+Figure 2.3: Opción del menú Gestionar Datos
+</p>
+</div></li>
+</ol>
+<p>En esta sección podemos ver todas las tablas CAS disponibles que tenemos.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Para subir nuesro archivo y construir nuestra propia tabla CAS debemos hacer click en Importar:
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="../imagenes/cap1_subir_excel_img_3.png" alt="Importar"  />
+<p class="caption">
+Figure 2.4: Importar
+</p>
+</div></li>
+<li>Seleccionamos “Archivo local”:
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<img src="../imagenes/cap1_subir_excel_img_4.2.png" alt="Subir archivo local"  />
+<p class="caption">
+Figure 2.5: Subir archivo local
+</p>
+</div></li>
+</ol>
+<p>Ahora se nos abrirá el “wizard” de windows para que naveguemos por nuestras carpetas y seleccionemos el archivo.</p>
+Una vez seleccionado, le damos al botón de “Abrir” y se abrirá la siguiente pantalla para ultimar los detalles de nuestra importación:
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
+<img src="../imagenes/cap1_subir_excel_img_5.png" alt="Subir archivo local"  />
+<p class="caption">
+Figure 2.6: Subir archivo local
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Por último hacemos click en “Importar elemento”.
+Si todo esta bien, el sistema arrojará un mensaje indicando que el proceso terminó correctamente.
+Asimismo, si ahora vamos a ver las tablas disponibles, deberíamos encontrar nuestra tabla cargada.</li>
+</ol>
+</div>
+</div>
+<div id="subir-un-archivo-csv" class="section level2">
+<h2><span class="header-section-number">2.2</span> Subir un archivo csv</h2>
+<p>Google nos dirá: “Los archivos CSV son un tipo de documento en formato abierto sencillo para representar datos en forma de tabla, en las que las columnas se separan por comas y las filas por saltos de línea.”</p>
+<p>Si navegamos por “BA Data” <a href="https://data.buenosaires.gob.ar/" class="uri">https://data.buenosaires.gob.ar/</a> u otro sitio de intercambio de información, encontraremos que los set de datos disponibles en general se presentan en este formato.</p>
+<p>Seguramente tengamos menos problemas al operar con archivos de este tipo.</p>
+<div id="pasos-para-subir-un-archivo-csv" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Pasos para subir un archivo CSV</h3>
+<p>Repetimos todos los pasos que vimos al subir un excel hasta el punto 5.
+La pantalla a la que llegamos en este caso, presenta algunas opciones que debemos considerar, dependiendo de como este armardo nuestro archivo CSV.</p>
+<ul>
+<li>Delimitador
+En nuestro archivo de ejemplo, el delimitador de columnas es “;”, por lo tanto debemos modificar el valor por defecto “;”:
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
+<img src="../imagenes/cap1_2_subir_csv_1.1.png" alt="Subir archivo local"  />
+<p class="caption">
+Figure 2.7: Subir archivo local
+</p>
+</div></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
+<img src="../imagenes/cap1_2_subir_csv_1.png" alt="Subir archivo local"  />
+<p class="caption">
+Figure 2.8: Subir archivo local
+</p>
+</div>
+También podemos indicar si la primera fila contiene o no los nombres de las columnas.
+Una vez configuradas todas las opciones en base al archivo que vamos a subir, hacemos click en “Importar elemento”.
+Y si todo salió bien, llegamos al final del proceso, con un mensaje que indica que todo salió bien:
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
+<img src="../imagenes/cap1_2_subir_csv_3.0_OK.png" alt="Subir archivo local"  />
+<p class="caption">
+Figure 2.9: Subir archivo local
+</p>
+</div>
+</div>
+<div id="posibles-errores" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Posibles errores</h3>
+Si obtenemos un error feo, como el siguiente:
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-10"></span>
+<img src="../imagenes/cap1_2_subir_csv_2.1_ERROR.png" alt="Subir archivo local"  />
+<p class="caption">
+Figure 2.10: Subir archivo local
+</p>
+</div>
+<p>Tenemos un problema de encoding en el archivo, esto pasa cuando el archivo se guardo con un juego de caracteres diferente al que le indicamos a SAS al momento de subir el archivo. Un formato muy común y el que vamos a usar es “UTF-8” este cambio lo podemos hacer desde un editor de texto, como “Notepad++”</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
+<img src="../imagenes/cap1_2_subir_csv_2.2_CORREGIR_ENCODING.png" alt="Subir archivo local"  />
+<p class="caption">
+Figure 2.11: Subir archivo local
+</p>
+</div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="union-de-fuentes-de-datos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
