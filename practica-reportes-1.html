@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 6 Mapas | Capacitacion SAS Viya GCBA SSSYP</title>
+  <title>Capítulo 4 Práctica Reportes 1 | Capacitacion SAS Viya GCBA SSSYP</title>
   <meta name="description" content="Inicializado gracias a ‘seankross/bookdown-start’ Everything you need (and nothing more) to start a bookdown book." />
   <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 6 Mapas | Capacitacion SAS Viya GCBA SSSYP" />
+  <meta property="og:title" content="Capítulo 4 Práctica Reportes 1 | Capacitacion SAS Viya GCBA SSSYP" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="artagnan77/capacitacion-sas-viya-sssyp-gcba" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 6 Mapas | Capacitacion SAS Viya GCBA SSSYP" />
+  <meta name="twitter:title" content="Capítulo 4 Práctica Reportes 1 | Capacitacion SAS Viya GCBA SSSYP" />
   
   <meta name="twitter:description" content="Inicializado gracias a ‘seankross/bookdown-start’ Everything you need (and nothing more) to start a bookdown book." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="practica-reportes-2.html">
-
+<link rel="prev" href="union-de-fuentes-de-datos.html">
+<link rel="next" href="practica-reportes-2.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -188,89 +188,147 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="mapas" class="section level1">
-<h1><span class="header-section-number">Capítulo 6</span> Mapas</h1>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">Este capítulo esta en construcción, falta completar</a></code></pre></div>
-<p>El objetivo de este capítulo es explicar paso a paso como crear una visualización de datos sobre mapas geográficos.
-Para esto haremos uso de tablas que ya estan precargadas en SAS Viya, y que reunen la información de los polígonos.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">Explicar un poco el tema proveedores de polígonos y los datos que debemos tener en nuestro set de datos</a></code></pre></div>
+<div id="practica-reportes-1" class="section level1">
+<h1><span class="header-section-number">Capítulo 4</span> Práctica Reportes 1</h1>
+<p>Ahora usando la tabla resultante del capítulo anterior, vamos a diseñar nuestro primer reporte.
+El objetivo de este capítulo es aprender a realizar un reporte sencillo, para visualizar los datos de la tabla y agregar filtros, tanto fijos como dinámicos.</p>
+<div id="objeto-tabla-de-lista" class="section level2">
+<h2><span class="header-section-number">4.1</span> Objeto “Tabla de lista”</h2>
+<ul>
+<li>En el panel de objetos a nuestra izquiera, vamos a seleccionar Tablas –&gt; Tabla de lista y arrastramos hacia el area de trabajo de la Página 1.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="./imagenes/cap4_img1_tabla_lista.png" alt="Tabla de lista"  />
+<p class="caption">
+Figure 1.1: Tabla de lista
+</p>
+</div>
+<ul>
+<li>Tenemos dos formas de agregar columnas en la tabla:
 <ol style="list-style-type: decimal">
-<li><p>Nuevo reporte, opción “Explorar y visualizar datos”</p></li>
-<li>Agregamos la tabla CAS al reporte:
+<li>Desde el panel general de datos, seleccionando los elementos y arrastrándolos hasta posicionarlos sobre la tabla,</li>
+<li>Teniendo seleccionada la tabla, desde el panel “Roles de datos”, eligiendo la opción “Columnas”, “Añadir”</li>
+</ol></li>
+</ul>
+<p>Nótese que hay un <b>asterisco rojo</b> que acompaña la sección “Columnas” eso indica que es obligatorio agregar al menos una columna para que el objeto, en este caso la tabla, se pueda construir.</p>
+<p><img src="./imagenes/cap4_img2_agregar_elementos.png" style="display: block; margin: auto;" /></p>
+<ul>
+<li>Seleccionamos las columnas que deseamos visualizar en la tabla y hacemos click en “Aceptar”</li>
+</ul>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
-<img src="./imagenes/cap6_img_01_AgregarCAS.png" alt="Añadir fuente de datos"  />
+<img src="./imagenes/cap4_img3_seleccionar_columnas.png" alt="Añadir columnas"  />
 <p class="caption">
-Figure 1.3: Añadir fuente de datos
+Figure 1.3: Añadir columnas
 </p>
-</div></li>
-<li>Generamos el elemento calculado “SECCION_MANZANA”
+</div>
+<p>Si todo salió bien, deberíamos poder visualizar ahora la tabla con los datos que elegimos.
+Es importante aclarar que el objeto “tabla de lista” tiene un límite de registros que se pueden visualizar, en general ese límite es de 40.000 filas.</p>
+</div>
+<div id="filtros-fijos-sobre-el-objeto" class="section level2">
+<h2><span class="header-section-number">4.2</span> Filtros fijos sobre el objeto</h2>
+<p>Todos los objetos aceptan este tipo de filtros.</p>
+<p>Supongamos que queremos visualizar todos los expedientes cuyo “ESTADO_EXP” -estado actualizado del expediente- sea distinto a “Guarda Temporal”:</p>
+<ul>
+<li>Siempre manteniendo el objeto seleccionado, en este caso nuestra tabla, seleccionamos la sección “filtros” del panel de la derecha:</li>
+</ul>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
-<img src="./imagenes/cap6_img_02_elemanto_calculado_ SECCION_MANZANA.png" alt="Sección-Manzana"  />
+<img src="./imagenes/cap4_img4_filtros.png" alt="Filtros sobre objeto"  />
 <p class="caption">
-Figure 1.4: Sección-Manzana
+Figure 1.4: Filtros sobre objeto
 </p>
-</div></li>
-<li>Generamos el elemento calculado -elemento greográfico- “SECCION_MANZANA”
+</div>
+<ul>
+<li>Hacemos click en “Nuevo filtro”</li>
+<li>Seleccionamos el elemento de datos sobre el que queremos aplicar el filtro, en nuestro caso “ESTADO_EXP”.</li>
+<li>Destildamos los valores a descartar, “Guarda Temporal” y cualquier otro estado que queramos descartar.</li>
+</ul>
+</div>
+<div id="filtros-sobre-la-fuente-de-datos" class="section level2">
+<h2><span class="header-section-number">4.3</span> Filtros sobre la fuente de datos</h2>
+<p>Si queremos aplicar un filtro que afecte a todo el reporte, conviene utilizar esta opción.
+Por ejemplo si quisieramos descartar en todo el reporte los expedientes en “ARCHIVO TEMPORAL”.</p>
+<ul>
+<li>Vamos al panel de datos de la izquierda y seleccionamos la opción “Aplicar filtro a la fuente de datos…”</li>
+</ul>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
-<img src="./imagenes/cap6_img_03_GEO_SECCION_MANZANA.png" alt="Seción-Manzana-GEO"  />
+<img src="./imagenes/cap4_img5_filtros_fuente.png" alt="Filtros sobre fuentes de datos"  />
 <p class="caption">
-Figure 1.5: Seción-Manzana-GEO
+Figure 1.5: Filtros sobre fuentes de datos
 </p>
-</div></li>
-<li>Generamos el elemento calculado “SECCION_MANZANA_PARCELA”
+</div>
+<ul>
+<li>Llegamos a una pantalla un poco más avanzada para la construcción de filtros.</li>
+<li>Buscamos el elemento de datos sobre el que vamos a aplicar el filtro, en nuestro caso nuevamente “ESTADO_EXP”</li>
+<li>Arrastramos el elemento hacia el panel y lo soltamos en el cuadro “condición”</li>
+<li>Ahora subimos y elegimos la solapa de “Operadores”</li>
+<li>Elegimos dentro del grupo “Comparación” el operador distinto “&lt;&gt;”</li>
+<li>En “cadena” escribimos el valor que queremos descartar, por ejemplo “ARCHIVO TEMPORAL”</li>
+<li>Por último hacemos click en “ACEPTAR”</li>
+</ul>
+<p>Si todo funcionó como esperábamos la tabla no nos debería estar mostrando los registros correspondientes a expedientes en ESTADO_EXP = “ARCHIVO TEMPORAL”</p>
+</div>
+<div id="filtros-dinamicos" class="section level2">
+<h2><span class="header-section-number">4.4</span> Filtros dinámicos</h2>
+<p>Ahora vamos a sumar al reporte algunos controles simples para interactuar con la tabla en forma de filtros.
+El filtro más comun que existe en todo tablero o reporte es el filtro de fechas y si no lo encontramos como filtro, seguramente tendremos algún gráfico que muestre una evolución temporal de alguna métrica.</p>
+<div id="barra-deslizante-o-slider" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Barra deslizante o slider</h3>
+<p>Supongamos en nuestro caso que queremos agregar un filtro dinámico utilizando la fecha de creación (fecha de caratulación del expediente):
+* Vamos al panel de objetos y buscamos dentro del grupo “Controles” la “Barra deslizante”. Este control es muy útil para usar en fechas.
+* Arrastramos el objeto al area de trabajo intentando que nos quede arriba de la tabla.
+* En el panel de roles de datos, seleccionamos “FECHA DE CREACIÓN”
+* Por último, para que el control actúe como filtro sobre la tabla, manteniendo seleccionado el objeto, vamos a la sección “Acciones” del panel de la derecha.
+* Elegimos la tabla de lista, dentro de “Enlaces de objeto”</p>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
-<img src="./imagenes/cap6_img_04_SECCION_MANZANA_PARCELA.png" alt="Sección-Manzana-Parcela"  />
+<img src="./imagenes/cap4_img6_filtros_dinamicos_fecha.png" alt="Barra deslizante"  />
 <p class="caption">
-Figure 1.6: Sección-Manzana-Parcela
+Figure 1.6: Barra deslizante
 </p>
-</div></li>
-<li>Generamos el elemento calculado, -elemento greográfico- “SECCION_MANZANA_PARCELA_GEO”
+</div>
+<p>Ahora, si modificamos los valores de la barra deslizante, la tabla se debería actualizar, filtrando los datos en base al rango de fechas establecido.</p>
+</div>
+<div id="lista-o-lista-desplegale" class="section level3">
+<h3><span class="header-section-number">4.4.2</span> Lista o lista desplegale</h3>
+<p>Supongamos ahora que queremos incluir un filtro para seleccionar una o varias tratas.
+Para ello podemos usar los controles “lista” o “lista desplegable”. El primero nos permitirá elegir varios valores, la lista desplegable en cambio, sólo uno.</p>
+<ul>
+<li><p>Nuevamente nos dirigimos al panel de objetos, y dentro del grupo de “Controles” seleccionamos y arrastramos hacia el reporte, el control deseado, en nuestro caso elegimos “Lista”, ya que queremos poder seleccionar varias tratas.</p></li>
+<li><p>Tratamos de ubicar el objeto a la izquierda de nuestra tabla:</p></li>
+</ul>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
-<img src="./imagenes/cap6_img_05_GEO_SECCION_MANZANA_PARCELA_GEO.png" alt="Sección-Manzana-Parcela-GEO"  />
+<img src="./imagenes/cap4_img7_filtro_lista.png" alt="Listas"  />
 <p class="caption">
-Figure 1.7: Sección-Manzana-Parcela-GEO
+Figure 1.7: Listas
 </p>
-</div></li>
-<li>Generamos la jerarquía
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
-<img src="./imagenes/cap6_img_06_Jerarquia.png" alt="Jerarquía GEO"  />
-<p class="caption">
-Figure 1.8: Jerarquía GEO
-</p>
-</div></li>
-<li><p>Seleccionamos el grafico “Mapa Geo”</p></li>
-<li>Asociamos la jerarquía creada como rol de datos del mapas
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
-<img src="./imagenes/cap6_img_07_Jerarquia_to_Rol.png" alt="Mapa 1 roles de datos"  />
-<p class="caption">
-Figure 1.9: Mapa 1 roles de datos
-</p>
-</div></li>
-<li>Creamos otroa mapa y le asociamos el rol “ManzanaGEO”
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-10"></span>
-<img src="./imagenes/cap6_img_08_Roles_2.png" alt="Mapa 2 roles de datos"  />
-<p class="caption">
-Figure 1.10: Mapa 2 roles de datos
-</p>
-</div></li>
-<li>Generamos la interacción automática entre todos los objetos
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
-<img src="./imagenes/cap6_img_09_interacciones.png" alt="Acciones entre objetos"  />
-<p class="caption">
-Figure 1.11: Acciones entre objetos
-</p>
-</div></li>
-</ol>
-<p><img src="./imagenes/cap6_img_10_Fin.png" style="display: block; margin: auto;" /></p>
+</div>
+<ul>
+<li><p>En el panel de roles de datos, seleccionamos “CODIGO_EXTRACTO”</p></li>
+<li><p>Luego, no debemos olvidar generar “la interacción” desde la sección “Acciones” del panel de la derecha al igual que el filtro anterior.</p></li>
+</ul>
+<p>Ahora, si elegimos alguna trata, deberíamos ver como se actualiza la tabla.</p>
+</div>
+</div>
+<div id="ejercicio-de-ejemplo-con-comparacion-de-datos" class="section level2">
+<h2><span class="header-section-number">4.5</span> Ejercicio de ejemplo con comparación de datos</h2>
+<p>Si llegamos con el tiempo, podemos hacer un ejercicio para visualizar diferencias entre “ESTADO” y “ESTADO_EXP”</p>
+</div>
+<div id="acciones-automaticas-en-todos-los-objetos" class="section level2">
+<h2><span class="header-section-number">4.6</span> Acciones automáticas en todos los objetos</h2>
+<p>Lo veremos en otro capítulo</p>
+</div>
+<div id="contenedores" class="section level2">
+<h2><span class="header-section-number">4.7</span> Contenedores</h2>
+<p>Lo veremos en otro capítulo</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="practica-reportes-2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="union-de-fuentes-de-datos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="practica-reportes-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

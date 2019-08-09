@@ -24,7 +24,7 @@
 <meta name="author" content="Sergio Lemme" />
 
 
-<meta name="date" content="2019-08-08" />
+<meta name="date" content="2019-08-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -129,7 +129,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="1" data-path="introduccion-a-la-plataforma.html"><a href="introduccion-a-la-plataforma.html"><i class="fa fa-check"></i><b>1</b> Introducción a la plataforma</a></li>
 <li class="chapter" data-level="2" data-path="subir-nuestros-datos-a-sas-viya.html"><a href="subir-nuestros-datos-a-sas-viya.html"><i class="fa fa-check"></i><b>2</b> Subir nuestros datos a SAS Viya</a><ul>
 <li class="chapter" data-level="2.1" data-path="subir-nuestros-datos-a-sas-viya.html"><a href="subir-nuestros-datos-a-sas-viya.html#subir-un-archivo-excel"><i class="fa fa-check"></i><b>2.1</b> Subir un archivo excel</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="subir-nuestros-datos-a-sas-viya.html"><a href="subir-nuestros-datos-a-sas-viya.html#nuestra-propia-tabla-cas"><i class="fa fa-check"></i><b>2.1.1</b> Nuestra propia tabla CAS</a></li>
@@ -198,9 +198,9 @@ El objetivo de este capítulo es aprender a realizar un reporte sencillo, para v
 <li>En el panel de objetos a nuestra izquiera, vamos a seleccionar Tablas –&gt; Tabla de lista y arrastramos hacia el area de trabajo de la Página 1.</li>
 </ul>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
-<img src="../imagenes/cap4_img1_tabla_lista.png" alt="Tabla de lista"  />
+<img src="./imagenes/cap4_img1_tabla_lista.png" alt="Tabla de lista"  />
 <p class="caption">
-Figure 2.1: Tabla de lista
+Figure 1.1: Tabla de lista
 </p>
 </div>
 <ul>
@@ -212,18 +212,18 @@ Nótese que hay un asterisco rojo que acompaña la sección “Columnas” eso i
 </ol></li>
 </ul>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
-<img src="../imagenes/cap4_img2_agregar_elementos.png" alt="Tabla de lista"  />
+<img src="./imagenes/cap4_img2_agregar_elementos.png" alt="Tabla de lista"  />
 <p class="caption">
-Figure 2.2: Tabla de lista
+Figure 1.2: Tabla de lista
 </p>
 </div>
 <ul>
 <li>Seleccionamos las columnas que deseamos visualizar en la tabla y hacemos click en “Aceptar”</li>
 </ul>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
-<img src="../imagenes/cap4_img3_seleccionar_columnas.png" alt="Tabla de lista"  />
+<img src="./imagenes/cap4_img3_seleccionar_columnas.png" alt="Tabla de lista"  />
 <p class="caption">
-Figure 2.3: Tabla de lista
+Figure 1.3: Tabla de lista
 </p>
 </div>
 <p>Si todo salió bien, deberíamos estar viendo la tabla con los datos que elegimos. Es importante aclarar que el objeto tabla de lista tiene un límite de registros que se pueden visualizar, en general ese límite es de 40.000 filas.</p>
@@ -234,9 +234,9 @@ Figure 2.3: Tabla de lista
 <p>Supongamos que queremos visualizar todos los expedientes cuyo “ESTADO_EXP” -estado actualizado del expediente- sea distinto a “Guarda Temporal”:
 * Siempre manteniendo el objeto seleccionado, en este caso nuestra tabla, seleccionamos la sección “filtros” del panel de la derecha.</p>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
-<img src="../imagenes/cap4_img4_filtros.png" alt="Tabla de lista"  />
+<img src="./imagenes/cap4_img4_filtros.png" alt="Tabla de lista"  />
 <p class="caption">
-Figure 2.4: Tabla de lista
+Figure 1.4: Tabla de lista
 </p>
 </div>
 <ul>
@@ -252,9 +252,9 @@ Por ejemplo si quisieramos descartar en todo el reporte los expedientes en “AR
 <ul>
 <li>Vamos al panel de datos de la izquierda y seleccionamos la opción “Aplicar filtro a la fuente de datos…”
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
-<img src="../imagenes/cap4_img5_filtros_fuente.png" alt="Tabla de lista"  />
+<img src="./imagenes/cap4_img5_filtros_fuente.png" alt="Tabla de lista"  />
 <p class="caption">
-Figure 2.5: Tabla de lista
+Figure 1.5: Tabla de lista
 </p>
 </div></li>
 <li>Llegamos a una pantalla un poco más avanzada para la construcción de filtros.</li>
@@ -280,9 +280,9 @@ El filtro más comun que existe en todo tablero o reporte es el filtro de fechas
 * Por último, para que el control actúe como filtro sobre la tabla, manteniendo seleccionado el objeto, vamos a la sección “Acciones” del panel de la derecha.
 * Elegimos la tabla de lista, dentro de “Enlaces de objeto”</p>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
-<img src="../imagenes/cap4_img6_filtros_dinamicos_fecha.png" alt="Tabla de lista"  />
+<img src="./imagenes/cap4_img6_filtros_dinamicos_fecha.png" alt="Tabla de lista"  />
 <p class="caption">
-Figure 2.6: Tabla de lista
+Figure 1.6: Tabla de lista
 </p>
 </div>
 <p>Ahora, si modificamos los valores de la barra deslizante, la tabla se debería actualizar, filtrando los datos en base al rango de fechas establecido.</p>
@@ -296,9 +296,9 @@ Para ello podemos usar los controles lista o lista desplegable. El primero nos p
 *Tratamos de ubicar el objeto a la izquierda de nuestra tabla:</li>
 </ul>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
-<img src="../imagenes/cap4_img7_filtro_lista.png" alt="Tabla de lista"  />
+<img src="./imagenes/cap4_img7_filtro_lista.png" alt="Tabla de lista"  />
 <p class="caption">
-Figure 2.7: Tabla de lista
+Figure 1.7: Tabla de lista
 </p>
 </div>
 <ul>
