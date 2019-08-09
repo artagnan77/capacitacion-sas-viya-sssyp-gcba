@@ -16,7 +16,7 @@ El objetivo de este capítulo es aprender a realizar un reporte sencillo, para v
 * En el panel de objetos a nuestra izquiera, vamos a seleccionar Tablas --> Tabla de lista y arrastramos hacia el area de trabajo de la Página 1.
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap4_img1_tabla_lista.png" alt="Tabla de lista"  />
+<img src="./imagenes/cap4_img1_tabla_lista.PNG" alt="Tabla de lista"  />
 <p class="caption">(\#fig:unnamed-chunk-1)Tabla de lista</p>
 </div>
 
@@ -26,12 +26,12 @@ El objetivo de este capítulo es aprender a realizar un reporte sencillo, para v
 
 Nótese que hay un <b>asterisco rojo</b> que acompaña la sección "Columnas" eso indica que es obligatorio agregar al menos una columna para que el objeto, en este caso la tabla, se pueda construir.
   
-<img src="./imagenes/cap4_img2_agregar_elementos.png" style="display: block; margin: auto;" />
+<img src="./imagenes/cap4_img2_agregar_elementos.PNG" style="display: block; margin: auto;" />
 
 * Seleccionamos las columnas que deseamos visualizar en la tabla y hacemos click en "Aceptar"
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap4_img3_seleccionar_columnas.png" alt="Añadir columnas"  />
+<img src="./imagenes/cap4_img3_seleccionar_columnas.PNG" alt="Añadir columnas"  />
 <p class="caption">(\#fig:unnamed-chunk-3)Añadir columnas</p>
 </div>
 
@@ -48,7 +48,7 @@ Supongamos que queremos visualizar todos los expedientes cuyo "ESTADO_EXP" -esta
 * Siempre manteniendo el objeto seleccionado, en este caso nuestra tabla, seleccionamos la sección "filtros" del panel de la derecha:
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap4_img4_filtros.png" alt="Filtros sobre objeto"  />
+<img src="./imagenes/cap4_img4_filtros.PNG" alt="Filtros sobre objeto"  />
 <p class="caption">(\#fig:unnamed-chunk-4)Filtros sobre objeto</p>
 </div>
 
@@ -65,7 +65,7 @@ Por ejemplo si quisieramos descartar en todo el reporte los expedientes en "ARCH
 * Vamos al panel de datos de la izquierda y seleccionamos la opción "Aplicar filtro a la fuente de datos..."
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap4_img5_filtros_fuente.png" alt="Filtros sobre fuentes de datos"  />
+<img src="./imagenes/cap4_img5_filtros_fuente.PNG" alt="Filtros sobre fuentes de datos"  />
 <p class="caption">(\#fig:unnamed-chunk-5)Filtros sobre fuentes de datos</p>
 </div>
 
@@ -96,7 +96,7 @@ Supongamos en nuestro caso que queremos agregar un filtro dinámico utilizando l
 * Elegimos la tabla de lista, dentro de "Enlaces de objeto"
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap4_img6_filtros_dinamicos_fecha.png" alt="Barra deslizante"  />
+<img src="./imagenes/cap4_img6_filtros_dinamicos_fecha.PNG" alt="Barra deslizante"  />
 <p class="caption">(\#fig:unnamed-chunk-6)Barra deslizante</p>
 </div>
 
@@ -113,7 +113,7 @@ Para ello podemos usar los controles "lista" o "lista desplegable". El primero n
 * Tratamos de ubicar el objeto a la izquierda de nuestra tabla:
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap4_img7_filtro_lista.png" alt="Listas"  />
+<img src="./imagenes/cap4_img7_filtro_lista.PNG" alt="Listas"  />
 <p class="caption">(\#fig:unnamed-chunk-7)Listas</p>
 </div>
 

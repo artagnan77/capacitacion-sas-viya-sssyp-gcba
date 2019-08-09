@@ -108,7 +108,7 @@ En nuestro archivo de ejemplo, el delimitador de columnas es ";", por lo tanto d
 </div>
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap1_2_subir_csv_1.png" alt="Configuraciones CSV"  />
+<img src="./imagenes/cap1_2_subir_csv_1.PNG" alt="Configuraciones CSV"  />
 <p class="caption">(\#fig:unnamed-chunk-8)Configuraciones CSV</p>
 </div>
 

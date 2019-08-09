@@ -31,7 +31,7 @@ Por el comportamiento predeterminado, SAS nos tomará también como medidas la e
 Por lo tanto una vez añadida la fuenta de datos al reporte, debemos seleccionar las categorías que fueron interpretadas como medidas y, elemento por elemmento, convertirlos a categoria:
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap5_img1_medidas_to_categ.png" alt="Medida2Categoria"  />
+<img src="./imagenes/cap5_img1_medidas_to_categ.PNG" alt="Medida2Categoria"  />
 <p class="caption">(\#fig:unnamed-chunk-2)Medida2Categoria</p>
 </div>
 
@@ -54,7 +54,7 @@ En la pantalla de edición del nuevo elemento calculado:
 3. Elegimos "DISTINCT" y arrastramos hacia el área de construcción del elemento calculado:
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap5_img2_distinct.png" alt="DISTINCT"  />
+<img src="./imagenes/cap5_img2_distinct.PNG" alt="DISTINCT"  />
 <p class="caption">(\#fig:unnamed-chunk-3)DISTINCT</p>
 </div>
 
@@ -62,14 +62,14 @@ Luego hacemos click en la sección "Elementos de Datos", seleccionamos el "ID_BE
 El elemento calculado debe quedar como en la siguiente imagen:
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap5_img3_distinct.png" alt="DISTINCT"  />
+<img src="./imagenes/cap5_img3_distinct.PNG" alt="DISTINCT"  />
 <p class="caption">(\#fig:unnamed-chunk-4)DISTINCT</p>
 </div>
 
 Una vez guardado, si vamos a la lista de elementos de datos, veremos que se agregó en la lista de elementos de datos, la medida "Total Beneficios", como medida de agregación:
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap5_img4_distinct.png" alt="Medida de agregación"  />
+<img src="./imagenes/cap5_img4_distinct.PNG" alt="Medida de agregación"  />
 <p class="caption">(\#fig:unnamed-chunk-5)Medida de agregación</p>
 </div>
 
@@ -86,14 +86,14 @@ Para ser precisos deberíamos considerar como ID el tipo y numero de documento, 
 4. Esta función acepta dos argumentos, que son las cadenas de caracteres a concatenar.
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap5_img5_concatenate.png" alt="DISTINCT"  />
+<img src="./imagenes/cap5_img5_concatenate.PNG" alt="DISTINCT"  />
 <p class="caption">(\#fig:unnamed-chunk-6)DISTINCT</p>
 </div>
 
 5. En nuestro caso aunque podríamos concatenar directamente el tipo y número de documento, como preferimos un guión en el medio, vamos a usar dos funciones "Concatenate" anidades en el mismo elemento calculado:
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap5_img6_concatenatecap5_2.png" alt="DISTINCT"  />
+<img src="./imagenes/cap5_img6_concatenatecap5_2.PNG" alt="DISTINCT"  />
 <p class="caption">(\#fig:unnamed-chunk-7)DISTINCT</p>
 </div>
 
@@ -122,12 +122,12 @@ Ahora veremos los distintos totales usando el grafico "Valor Clave"
 5. Seguimos en el mismo panel de opciones y en la parte inferior, destildamos la opción "Usar valor abreviado".
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap5_img7_keyvalue.png" alt="DISTINCT"  />
+<img src="./imagenes/cap5_img7_keyvalue.PNG" alt="DISTINCT"  />
 <p class="caption">(\#fig:unnamed-chunk-9)DISTINCT</p>
 </div>
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap5_img8_keyvalue.png" alt="DISTINCT"  />
+<img src="./imagenes/cap5_img8_keyvalue.PNG" alt="DISTINCT"  />
 <p class="caption">(\#fig:unnamed-chunk-10)DISTINCT</p>
 </div>
 
@@ -140,7 +140,7 @@ Como vemos, la cantidad de beneficios coincide con la cantidad de registros de l
 Hacemos lo mismo y generemos otro gráfico de valor clave, tomando como medida en este caso el "Total Beneficiarios"
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap5_img9_keyvalues.png" alt="DISTINCT"  />
+<img src="./imagenes/cap5_img9_keyvalues.PNG" alt="DISTINCT"  />
 <p class="caption">(\#fig:unnamed-chunk-11)DISTINCT</p>
 </div>
 
@@ -156,7 +156,7 @@ Haciendo click en el "+" a la derecha del título de la pagina "Pagina 1", cream
 5. Duplicamos el gráfico y seleccionamos como medida, "Total Beneficiarios"
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap5_img10_tortas.png" alt="DISTINCT"  />
+<img src="./imagenes/cap5_img10_tortas.PNG" alt="DISTINCT"  />
 <p class="caption">(\#fig:unnamed-chunk-12)DISTINCT</p>
 </div>
 
@@ -188,7 +188,7 @@ Borramos ahora el segundo gráfico.
 2. Probamos los filtros y la interacción entre los gráficos
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap5_img11_tortas.png" alt="DISTINCT"  />
+<img src="./imagenes/cap5_img11_tortas.PNG" alt="DISTINCT"  />
 <p class="caption">(\#fig:unnamed-chunk-13)DISTINCT</p>
 </div>
 

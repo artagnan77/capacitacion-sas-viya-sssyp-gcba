@@ -24,7 +24,7 @@ Explicar un poco el tema proveedores de polígonos y los datos que debemos tener
 
 2. Agregamos la tabla CAS al reporte:
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap6_img_01_AgregarCAS.png" alt="Añadir fuente de datos"  />
+<img src="./imagenes/cap6_img_01_AgregarCAS.PNG" alt="Añadir fuente de datos"  />
 <p class="caption">(\#fig:unnamed-chunk-3)Añadir fuente de datos</p>
 </div>
 
@@ -36,7 +36,7 @@ Explicar un poco el tema proveedores de polígonos y los datos que debemos tener
 
 4. Generamos el elemento calculado -elemento greográfico- "SECCION_MANZANA"
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap6_img_03_GEO_SECCION_MANZANA.png" alt="Seción-Manzana-GEO"  />
+<img src="./imagenes/cap6_img_03_GEO_SECCION_MANZANA.PNG" alt="Seción-Manzana-GEO"  />
 <p class="caption">(\#fig:unnamed-chunk-5)Seción-Manzana-GEO</p>
 </div>
 
@@ -48,7 +48,7 @@ Explicar un poco el tema proveedores de polígonos y los datos que debemos tener
 
 6. Generamos el elemento calculado, -elemento greográfico- "SECCION_MANZANA_PARCELA_GEO"
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap6_img_05_GEO_SECCION_MANZANA_PARCELA_GEO.png" alt="Sección-Manzana-Parcela-GEO"  />
+<img src="./imagenes/cap6_img_05_GEO_SECCION_MANZANA_PARCELA_GEO.PNG" alt="Sección-Manzana-Parcela-GEO"  />
 <p class="caption">(\#fig:unnamed-chunk-7)Sección-Manzana-Parcela-GEO</p>
 </div>
 

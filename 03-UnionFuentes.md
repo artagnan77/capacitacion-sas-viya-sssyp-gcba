@@ -25,12 +25,12 @@ Supongamos que ese listado fue el primer excel que subimos en el capítulo anter
 1. Iniciamos un nuevo reporte usando la opción del menú: "Explorar y visualizar datos"
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap3_union_1_nuevo_report.png" alt="Explorar y visualizar datos"  />
+<img src="./imagenes/cap3_union_1_nuevo_report.PNG" alt="Explorar y visualizar datos"  />
 <p class="caption">(\#fig:unnamed-chunk-1)Explorar y visualizar datos</p>
 </div>
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap3_union_2.png" alt="Nuevo reporte"  />
+<img src="./imagenes/cap3_union_2.PNG" alt="Nuevo reporte"  />
 <p class="caption">(\#fig:unnamed-chunk-2)Nuevo reporte</p>
 </div>
 
@@ -40,7 +40,7 @@ Otra opción es hacer click en el icono de la derecha, "Acciones" y seleccionar 
 3. En la siguiente ventana "Abrir fuente de datos" buscamos nuestra tabla, para ello basta con escribir las primeras letras para filtrar el listado de tablas disponibles hasta que podamos encontrar la tabla deseada:
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap3_union_3.png" alt="Selección de tabla"  />
+<img src="./imagenes/cap3_union_3.PNG" alt="Selección de tabla"  />
 <p class="caption">(\#fig:unnamed-chunk-3)Selección de tabla</p>
 </div>
 
@@ -49,7 +49,7 @@ Otra opción es hacer click en el icono de la derecha, "Acciones" y seleccionar 
 5. Volvemos al icono que nos abre las opciones de datos y elegimos en este caso "Nueva unión de fuentes de datos..."
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap3_union_5bis.png" alt="Nueva unión de fuentes de datos"  />
+<img src="./imagenes/cap3_union_5bis.PNG" alt="Nueva unión de fuentes de datos"  />
 <p class="caption">(\#fig:unnamed-chunk-4)Nueva unión de fuentes de datos</p>
 </div>
 
@@ -59,7 +59,7 @@ Otra opción es hacer click en el icono de la derecha, "Acciones" y seleccionar 
 * Asignar un nombre a la tabla resultado que crearemos con la unión
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap3_union_6.png" alt="Segunda tabla"  />
+<img src="./imagenes/cap3_union_6.PNG" alt="Segunda tabla"  />
 <p class="caption">(\#fig:unnamed-chunk-5)Segunda tabla</p>
 </div>
 
@@ -67,7 +67,7 @@ Otra opción es hacer click en el icono de la derecha, "Acciones" y seleccionar 
 * Elegir el tipo de unión
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap3_union_8_tipo_union.png" alt="Tipo de unión"  />
+<img src="./imagenes/cap3_union_8_tipo_union.PNG" alt="Tipo de unión"  />
 <p class="caption">(\#fig:unnamed-chunk-6)Tipo de unión</p>
 </div>
 En este caso elegiremos la opción "Union izquierda" ya que no queremos perder datos de la tabla 1, que es la que debemos analizar, es la tabla que nos pasó el usuario para verificar.
@@ -78,7 +78,7 @@ En este caso elegiremos la opción "Union izquierda" ya que no queremos perder d
 * Seleccionar las columnas que deseamos incluir en la unión
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap3_union_9_sel_columnas.png" alt="Selección de columnas"  />
+<img src="./imagenes/cap3_union_9_sel_columnas.PNG" alt="Selección de columnas"  />
 <p class="caption">(\#fig:unnamed-chunk-7)Selección de columnas</p>
 </div>
 
@@ -91,7 +91,7 @@ Siempre es sano a medida que avanzamos ir guardando los cambios.
 Guardamos el reporte en  nuestra carpeta personal "MyFolder".
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap3_union_10_Guardar_Reporte.png" alt="Guardar reporte"  />
+<img src="./imagenes/cap3_union_10_Guardar_Reporte.PNG" alt="Guardar reporte"  />
 <p class="caption">(\#fig:unnamed-chunk-8)Guardar reporte</p>
 </div>
 
@@ -102,7 +102,7 @@ Para reforzar este punto y además sumar otras columas a nuestra tabla, vamos a 
 Como mínimo seleccionamos estas columnas para la práctica:
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap3_union_11_union_con_dim_sel_columns.png" alt="Selección de columnas"  />
+<img src="./imagenes/cap3_union_11_union_con_dim_sel_columns.PNG" alt="Selección de columnas"  />
 <p class="caption">(\#fig:unnamed-chunk-9)Selección de columnas</p>
 </div>
 
@@ -110,7 +110,7 @@ Y por último, nuevamente elegimos "Unión izquierda", porque queremos mantener 
 <i>Explicar más este punto</i>
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap3_union_12_left_join.png" alt="Left Join"  />
+<img src="./imagenes/cap3_union_12_left_join.PNG" alt="Left Join"  />
 <p class="caption">(\#fig:unnamed-chunk-10)Left Join</p>
 </div>
 
