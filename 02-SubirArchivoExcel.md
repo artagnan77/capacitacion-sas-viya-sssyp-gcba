@@ -103,7 +103,7 @@ La pantalla a la que llegamos en este caso, presenta algunas opciones que debemo
 En nuestro archivo de ejemplo, el delimitador de columnas es ";", por lo tanto debemos modificar el valor por defecto ";":
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap1_2_subir_csv_1.1.png" alt="Subir CSV"  />
+<img src="./imagenes/cap1_2_subir_csv_1_1.png" alt="Subir CSV"  />
 <p class="caption">(\#fig:unnamed-chunk-7)Subir CSV</p>
 </div>
 
@@ -116,7 +116,7 @@ También podemos indicar si la primera fila contiene o no los nombres de las col
 Una vez configuradas todas las opciones en base al archivo que vamos a subir, hacemos click en "Importar elemento".
 Y si todo salió bien, llegamos al final del proceso, con un mensaje que indica que todo salió bien:
 
-<img src="./imagenes/cap1_2_subir_csv_3.0_OK.png" style="display: block; margin: auto;" />
+<img src="./imagenes/cap1_2_subir_csv_3_0_OK.png" style="display: block; margin: auto;" />
 
 
 ### Posibles errores
@@ -124,13 +124,13 @@ Y si todo salió bien, llegamos al final del proceso, con un mensaje que indica 
 Si obtenemos un error feo, como el siguiente:
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap1_2_subir_csv_2.1_ERROR.png" alt="Error de encoding"  />
+<img src="./imagenes/cap1_2_subir_csv_2_1_ERROR.png" alt="Error de encoding"  />
 <p class="caption">(\#fig:unnamed-chunk-10)Error de encoding</p>
 </div>
 Tenemos un problema de encoding en el archivo, esto pasa cuando el archivo se guardo con un juego de caracteres diferente al que le indicamos a SAS al momento de subir el archivo. Un formato muy común y el que vamos a usar es "UTF-8" este cambio lo podemos hacer desde un editor de texto, como "Notepad++"
 
 <div class="figure" style="text-align: center">
-<img src="./imagenes/cap1_2_subir_csv_2.2_CORREGIR_ENCODING.png" alt="Modificar encoding"  />
+<img src="./imagenes/cap1_2_subir_csv_2_2_CORREGIR_ENCODING.png" alt="Modificar encoding"  />
 <p class="caption">(\#fig:unnamed-chunk-11)Modificar encoding</p>
 </div>
 
