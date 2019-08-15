@@ -1,7 +1,7 @@
 --- 
 title: "Capacitacion SAS Viya GCBA SSSYP"
 author: "Sergio Lemme <br>Colaboradores: Ervin Wilneder & Pablo Sanroman"
-date: "2019-08-09"
+date: "2019-08-15"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]

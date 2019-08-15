@@ -111,7 +111,7 @@ Concatenate(Concatenate('TIPO_DOCUMENTO'n, '-'), Format(
 Por último así como construimos "Total Beneficios", podemos haciendo uso de "DISTINCT" construir un nuevo elemento calculado "Total Beneficiarios" aplicando la función "DISTINCT" sobre el elemento que creamos en el punto anterior "Tipo y Nro. de Documento"
 
 
-##Gráfico "Valor Clave"
+## Gráfico "Valor Clave"
 
 Ahora veremos los distintos totales usando el grafico "Valor Clave"
 
@@ -145,7 +145,7 @@ Hacemos lo mismo y generemos otro gráfico de valor clave, tomando como medida e
 </div>
 
 
-##Gráfico de Torta
+## Gráfico de Torta
 
 Haciendo click en el "+" a la derecha del título de la pagina "Pagina 1", creamos una nueva página.
 
